@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="475dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="92dp"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="タグ"
+                android:id="@+id/textView"
+                android:layout_margin="10dp"
+                android:textSize="@dimen/abc_text_size_medium_material" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="URL"
+                android:id="@+id/textView2"
+                android:textSize="@dimen/abc_text_size_medium_material"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="サイトを表示"
+                android:id="@+id/button_web"
+                android:textSize="@dimen/abc_dropdownitem_text_padding_left"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:nestedScrollingEnabled="false"
+                android:onClick="showWeb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:id="@+id/editText_Tag"
+                android:layout_margin="10dp"
+                android:inputType="text"
+                android:text="表示する名前"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:id="@+id/editText_URL"
+                android:layout_margin="10dp"
+                android:inputType="text"
+                android:text="http://life-is-tech.com/"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="戻る"
+            android:id="@+id/button_back"
+            android:onClick="back"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="保存する"
+            android:id="@+id/button_reserve"
+            android:layout_margin="10dp"
+            android:onClick="reserve" />
+    </LinearLayout>
+
+</LinearLayout>
